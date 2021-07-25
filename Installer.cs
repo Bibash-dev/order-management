@@ -11,15 +11,15 @@ namespace StudentOneTOManyRelation
         public static void UseServices(this IServiceCollection services)
         {
             services.AddScoped<IEmployeeService, EmployeeService>()
-                .AddScoped<IEmployeeRepository, EmployeeRepository>()
-                .AddScoped<IDepartmentRepository, DepartmentRepository>()
                 .AddScoped<IDepartmentService, DepartmentService>()
-                .AddScoped<IOrderRepository, OrderRepository>()
                 .AddScoped<IOrderService, OrderService>();
         }
 
         public static void UseRepos(this IServiceCollection services)
         {
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>()
+                .AddScoped<IDepartmentRepository, DepartmentRepository>()
+                .AddScoped<IOrderRepository, OrderRepository>();
         }
     }
 }
