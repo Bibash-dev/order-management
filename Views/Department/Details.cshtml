@@ -1,0 +1,18 @@
+﻿@model StudentOneTOManyRelation.Entities.Department
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+<div class=" col-6">
+
+
+    Name= @Model.Name<br>
+
+
+</div>
+<div class="container  mb-3">
+    <a asp-controller="Department" asp-action="Index" class="btn btn-sm btn-primary">Back</a>
+</div>

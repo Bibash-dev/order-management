@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>aspnet-StudentOneTOManyRelation-1A8364C4-2EC8-4412-B421-4F45CF2697FB</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
+        <PackageReference Include="EntityFramework6.Npgsql" Version="6.4.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6" />
+        <PackageReference Include="Npgsql" Version="5.0.7" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="5.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Department\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Department\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Department\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Department\New.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Employee\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Employee\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Employee\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Employee\New.cshtml" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿@model StudentOneTOManyRelation.ViewModel.DepartmentVm
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+<div class="container col-6 bg-dark text-white">
+    <form asp-controller="Department" asp-action="New" methods="post">
+
+        <div class="card-title">Add Your Detail</div>
+        <div class="card-body">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input type="text" asp-for="Name" class="form-control">
+                <span class="text-danger text-center" asp-validation-for="Name"></span>
+            </div>
+            <button class="btn btn-sm btn-primary" type="submit">Save</button>
+        </div>
+    </form>
+</div>

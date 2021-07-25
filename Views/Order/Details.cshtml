@@ -1,0 +1,25 @@
+﻿@model StudentOneTOManyRelation.Entities.Order
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+
+<div class=" col-6">
+
+
+   
+    Department NAme =@Model.Department<br>
+    Employee Name = @Model.Employee<br>
+    Order Name= @Model.Name<br>
+    Product =@Model.Product<br>
+    Price =@Model.Price<br>
+    Date =@Model.OrderDate<br>
+
+
+</div>
+<div class="container col-4 ">
+    <a asp-controller="Department" asp-action="Index" class="btn btn-sm btn-primary">Back</a>
+</div>

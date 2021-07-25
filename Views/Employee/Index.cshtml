@@ -1,0 +1,46 @@
+﻿@model System.Collections.Generic.List<StudentOneTOManyRelation.Entities.Employee>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+<div class="container-fluid col-6 mb-3">
+
+    <a asp-controller="Employee" asp-action="New" class="btn btn-sm btn-primary">New</a>
+</div>
+<div class="container-fluid col-6">
+
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+            <th>S.n</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @{
+            var sn = 1;
+            foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@(sn++)</td>
+                    <td>@employee.Name</td>
+                    <td>
+                        <a asp-controller="Employee" asp-action="Edit" asp-route-Id="@employee.Id" class="btn-sm btn btn-primary">Edit</a>
+                        <a asp-controller="Employee" asp-action="Delete" asp-route-Id="@employee.Id" class="btn btn-sm btn-danger">Delete</a>
+                        <a asp-controller="Employee" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-sm btn-dark">Details</a>
+
+
+                    </td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+
+</div>
